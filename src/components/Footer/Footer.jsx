@@ -11,18 +11,18 @@ export const Footer = () => {
   return (
     <footer className={style.footer}>
       <div>
-        {footerContent.map((content) => {
-          return <p>{content.text}</p>;
+        {footerContent.map((content, index) => {
+          return <p key={index + "a"}>{content.text}</p>;
         })}
       </div>
       <div>
-        {footerContent.map((content) => {
-          return <p>{content.text}</p>;
+        {footerContent.map((content, index) => {
+          return <p key={index + "b"}>{content.text}</p>;
         })}
       </div>
       <div>
-        {footerContent.map((content) => {
-          return <p>{content.text}</p>;
+        {footerContent.map((content, index) => {
+          return <p key={index + "c"}>{content.text}</p>;
         })}
       </div>
     </footer>
