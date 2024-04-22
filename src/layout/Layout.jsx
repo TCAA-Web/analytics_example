@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import { CookieBanner } from "../components/CookieBanner";
 
 export const Layout = () => {
   return (
@@ -14,6 +15,7 @@ export const Layout = () => {
 
       <Outlet />
 
+      <CookieBanner />
       <footer>
         <h4>FOOTER</h4>
       </footer>

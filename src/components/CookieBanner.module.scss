@@ -1,0 +1,11 @@
+.cookieBanner {
+  display: grid;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: 3fr 1fr;
+  border-top: solid 1px black;
+}
