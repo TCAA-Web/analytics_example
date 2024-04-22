@@ -10,7 +10,7 @@ export const CookieBanner = () => {
     if (localStorage.getItem("cookieAccept")) {
       setShowBanner(false);
       if (JSON.parse(localStorage.getItem("cookieAccept")) === true) {
-        ReactGA.initialize("G-YTQRSQPW5B");
+        ReactGA.initialize(import.meta.env.VITE_PUBLIC_GA_ID); // BEMÆRK - HER SKAL DIN PERSONLIGE GOOGLE ANALYTICS G-ID INDSÆTTES
       }
     }
   }, [showBanner]);
