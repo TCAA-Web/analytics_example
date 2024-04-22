@@ -18,12 +18,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Frontpage /> },
       {
-        path: "/about",
+        path: "about",
         element: <Aboutpage />,
       },
     ],
   },
-  { basename: "./" },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
