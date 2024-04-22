@@ -6,7 +6,7 @@ export const Navbar = () => {
     <nav className={style.nav}>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/about">About</Link>
         </li>
       </ul>
