@@ -1,6 +1,6 @@
 export const Aboutpage = () => {
   return (
-    <section>
+    <section style={{ display: "grid", padding: "32px", gap: "16px" }}>
       <h1>About</h1>
 
       <p>

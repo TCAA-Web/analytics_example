@@ -1,0 +1,16 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 8px;
+  margin-top: auto;
+  height: 15vh;
+  position: relative;
+  z-index: 1;
+  border-top: solid 1px white;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+}

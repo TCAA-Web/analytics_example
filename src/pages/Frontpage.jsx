@@ -1,6 +1,6 @@
 export const Frontpage = () => {
   return (
-    <section>
+    <section style={{ display: "grid", padding: "32px", gap: "16px" }}>
       <h1>Frontpage</h1>
 
       <p>

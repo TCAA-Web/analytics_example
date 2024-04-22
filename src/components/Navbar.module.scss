@@ -1,0 +1,27 @@
+.nav {
+  background-color: #444;
+  color: black;
+  height: 10vh;
+  display: grid;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      a {
+        font-size: 1.2rem;
+        color: white;
+      }
+
+      a:hover {
+        color: gray;
+      }
+    }
+  }
+}
