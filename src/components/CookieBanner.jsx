@@ -3,13 +3,9 @@ import style from "./CookieBanner.module.scss";
 import ReactGA from "react-ga4";
 
 export const CookieBanner = () => {
-  // Displayes i bunden af skærmen - DONE
-  // Skal have en deny og accepter option
-  // Skal kun initializere GTAG hvis man accepterer
-
   const [showBanner, setShowBanner] = useState(true);
 
-  // Tjek om brugeren har acceptert allerede
+  // Tjek om brugeren har accepteret allerede
   useEffect(() => {
     if (localStorage.getItem("cookieAccept")) {
       setShowBanner(false);
