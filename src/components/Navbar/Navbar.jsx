@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import style from "./Navbar.module.scss";
 
 export const Navbar = () => {
@@ -6,8 +6,8 @@ export const Navbar = () => {
     <nav className={style.nav}>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </nav>

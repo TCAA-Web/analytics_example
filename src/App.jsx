@@ -1,31 +1,24 @@
-import { Layout } from "./layout/Layout.jsx";
-import { Frontpage } from "./pages/Frontpage.jsx";
-import { Aboutpage } from "./pages/Aboutpage.jsx";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./app.css";
-import {
-  Route,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
-  BrowserRouter,
-} from "react-router-dom";
+import { Layout } from "./layout/Layout";
+import { Frontpage, Aboutpage, NotFoundpage } from "./pages/index";
+//import { routes } from "./routes/routes.jsx";
 
-export const NotFoundPage = () => {
-  return <p>404 not found.......</p>;
-};
+function App() {
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { index: true, element: <Frontpage /> },
+        { path: "/home", element: <Frontpage /> },
+        { path: "/about", element: <Aboutpage /> },
+        { path: "/*", element: <NotFoundpage /> },
+      ],
+    },
+  ]);
 
-export const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Frontpage />} />
-          <Route path="/home" element={<Frontpage />} />
-          <Route path="/about" element={<Aboutpage />} />
-          <Route path="/*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-};
+  return <RouterProvider router={router} />;
+}
+
+export default App;
